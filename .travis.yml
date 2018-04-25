@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 9
+
+dist: trusty
+sudo: false
+
+cache:
+  yarn: true
+  timeout: 600
+  directories:
+    - node_modules
+
+install:
+  - yarn install
+
+script:
+  - yarn build
+  - yarn test

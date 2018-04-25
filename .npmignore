@@ -144,3 +144,4 @@ $RECYCLE.BIN/
 test/
 yarn.lock
 webpack.config.js
+.travis.yml

@@ -1,2 +1,2 @@
-export * from './instruction';
-export * from './instructionSet';
+export * from './Instruction';
+export * from './InstructionSet';
