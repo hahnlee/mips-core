@@ -19,10 +19,6 @@ export class Simulator {
   parser: Parser;
 
   constructor(registerMap: {[id: string]: number}) {
-    this.setRegister(registerMap);
-  }
-
-  setRegister(registerMap: {[id: string]: number}): void {
     this.registerFile = new RegisterFile(registerMap);
     this.instructionSet = new InstructionSet(this.registerFile);
     const keyword: string[] = Object.keys(this.instructionSet.instructions);

@@ -7,7 +7,7 @@ export class Parser {
     this.keyword = keyword;
   }
 
-  getRegisterNum(name: string): (number|Error) {
+  getRegisterNum(name: string): number {
     const result: (number|undefined) =this.registerMap[name];
     if (result === undefined) {
       throw new Error(`No such register ${name}`);

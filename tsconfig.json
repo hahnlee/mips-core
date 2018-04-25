@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2018"
+    ],
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strict": true,
     "baseUrl": "./src/",
     "paths": {
       "assembler/*": ["assembler/*"],
@@ -11,7 +16,6 @@
     }
   },
   "exclude": [
-    "src/**/test/*.ts",
-    "src/lib.ts"
+    "src/**/test/*.ts"
   ]
 }

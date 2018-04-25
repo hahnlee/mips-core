@@ -2,8 +2,10 @@
   "name": "mips-core",
   "version": "0.1.0",
   "description": "MIPS Assembler Simulator Inspired by MARS",
-  "main": "index.js",
+  "main": "build/mips-core.js",
   "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "webpack",
     "test": "nyc mocha"
   },
   "author": "Han Lee",
@@ -16,11 +18,14 @@
   "devDependencies": {
     "@types/mocha": "^5.2.0",
     "@types/node": "^9.6.6",
+    "awesome-typescript-loader": "^5.0.0",
     "mocha": "^5.1.1",
     "nyc": "^11.7.1",
     "ts-node": "^6.0.0",
     "tsconfig-paths": "^3.3.1",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   },
   "nyc": {
     "include": [

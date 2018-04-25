@@ -1,7 +1,7 @@
 import {
   Instruction,
   InstructionFormat,
-} from './Instruction';
+} from './instruction';
 
 import {
   RegisterFile,
