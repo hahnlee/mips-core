@@ -1,1 +1,1 @@
-export * from './simulator';
+export * from './Simulator';

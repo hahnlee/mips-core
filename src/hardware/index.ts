@@ -1,2 +1,2 @@
-export * from './register';
-export * from './registerFile';
+export * from './Register';
+export * from './RegisterFile';

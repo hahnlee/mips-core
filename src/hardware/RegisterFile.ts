@@ -1,7 +1,7 @@
 import {
   Register,
   RegisterObserver,
-} from './register';
+} from './Register';
 
 export class RegisterFile {
   registerList: Register[] = [];
