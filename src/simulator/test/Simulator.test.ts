@@ -1,6 +1,6 @@
 import * as assert from 'assert';
 
-import { Simulator } from '../simulator';
+import { Simulator } from '../Simulator';
 
 const registerMap: {[id: string]: number} = {
   '$zero': 0,
