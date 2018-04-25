@@ -5,6 +5,8 @@
       "es2018"
     ],
     "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "build",
     "noImplicitAny": true,
     "strict": true,
     "baseUrl": "./src/",

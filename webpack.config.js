@@ -28,6 +28,9 @@ module.exports = {
         use: [
           {
             loader: 'awesome-typescript-loader',
+            options: {
+              useBabel: true,
+            },
           },
         ],
       },
