@@ -1,8 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "target": "es2017",
+    "module": "commonjs",
+    "baseUrl": "./src/",
     "paths": {
-      "hardware/*": ["hardware/*"]
+      "assembler/*": ["assembler/*"],
+      "hardware/*": ["hardware/*"],
+      "instruction/*": ["instruction/*"],
+      "simulator/*": ["simulator/*"]
     }
-  }
+  },
+  "exclude": [
+    "src/**/test/*.ts",
+    "src/lib.ts"
+  ]
 }

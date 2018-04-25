@@ -1,10 +1,10 @@
-export enum AccessType {
+export enum RegisterAccessType {
   READ,
   WRITE,
   RESET,
 }
 
-export type RegisterObserver = (num: number, type: AccessType) => void;
+export type RegisterObserver = (num: number, type: RegisterAccessType) => void;
 
 export class Register {
   name: string;
@@ -24,7 +24,7 @@ export class Register {
     this.resetVal = value;
   }
 
-  notifyObserver(type: AccessType): void {
+  notifyObserver(type: RegisterAccessType): void {
     if (this.observer) {
       this.observer(this.num, type);
     }
@@ -32,17 +32,16 @@ export class Register {
 
   reset(): void {
     this.value = this.resetVal;
-    this.notifyObserver(AccessType.RESET);
+    this.notifyObserver(RegisterAccessType.RESET);
   }
 
-  set(value: number) {
+  set(value: number): void {
     this.value = value;
-    this.notifyObserver(AccessType.WRITE);
+    this.notifyObserver(RegisterAccessType.WRITE);
   }
 
   get(): number {
-    this.notifyObserver(AccessType.READ);
+    this.notifyObserver(RegisterAccessType.READ);
     return this.value;
   }
-
 }
