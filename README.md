@@ -1,4 +1,5 @@
 # MIPS-CORE
+![travis](https://travis-ci.org/sn0wle0pard/mips-core.svg?branch=master)
 > MIPS Assembler Simulator Inspired by [MARS](http://courses.missouristate.edu/KenVollmar/mars/)
 
 MIPS CORE is core part of MIPS Studio
