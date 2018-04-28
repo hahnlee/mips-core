@@ -39,7 +39,7 @@
       "src/**/test/*.ts",
       "src/**/test/*.tsx",
       "src/**/index.ts",
-      "src/lib.ts"
+      "src/mips-core.ts"
     ],
     "extension": [
       ".ts",
