@@ -1,5 +1,5 @@
 # MIPS-CORE
-![travis](https://travis-ci.org/sn0wle0pard/mips-core.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/sn0wle0pard/mips-core/badge.svg?branch=master)](https://coveralls.io/github/sn0wle0pard/mips-core?branch=master)
+[![Build Status](https://travis-ci.org/sn0wle0pard/mips-core.svg?branch=master)](https://travis-ci.org/sn0wle0pard/mips-core) [![Coverage Status](https://coveralls.io/repos/github/sn0wle0pard/mips-core/badge.svg?branch=master)](https://coveralls.io/github/sn0wle0pard/mips-core?branch=master)
 > MIPS Assembler Simulator Inspired by [MARS](http://courses.missouristate.edu/KenVollmar/mars/)
 
 MIPS CORE is core part of MIPS Studio
