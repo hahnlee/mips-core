@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rm -rf build && tsc --emitDeclarationOnly",
     "build": "webpack",
-    "test": "nyc mocha",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' nyc mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "Han Lee",
