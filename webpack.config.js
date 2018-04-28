@@ -2,7 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: resolve(__dirname, 'src', 'index.ts'),
+  entry: resolve(__dirname, 'src', 'mips-core.ts'),
   output: {
     path: resolve(__dirname, 'build'),
     filename: 'mips-core.js',
@@ -30,6 +30,7 @@ module.exports = {
             loader: 'awesome-typescript-loader',
             options: {
               useBabel: true,
+              declaration: false,
             },
           },
         ],
