@@ -26,7 +26,7 @@ export class Simulator {
     this.parser = new Parser(registerMap, keyword);
   }
 
-  run(asmCode: string): void {
+  async run(asmCode: string): Promise<void> {
     const parserResult: (string|number)[][] = this.parser.parse(asmCode);
     for (let indexStr in parserResult) {
       const index: number = parseInt(indexStr, 10);
@@ -39,7 +39,7 @@ export class Simulator {
 
       const operation: (string|number)[] = parserResult[index];
       // run code
-      this.instructionSet
+      await this.instructionSet
         .getInstruction(operation[0] as string)
         .run(
           operation[1] as number,
