@@ -37,4 +37,4 @@ const registerMap: {[id: string]: number} = {
   '$ra': 31,
 };
 
-const simulator: Simulator = new Simulator(registerMap);
+const simulator: Simulator = new Simulator(registerMap, 100, 1);

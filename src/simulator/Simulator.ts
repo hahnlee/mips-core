@@ -18,9 +18,10 @@ export class Simulator {
   registerFile: RegisterFile;
   parser: Parser;
 
-  constructor(registerMap: {[id: string]: number}) {
+  constructor(registerMap: {[id: string]: number}, clock: number, ipc: number) {
     this.registerFile = new RegisterFile(registerMap);
-    this.instructionSet = new InstructionSet(this.registerFile);
+    const mspi: number = 1000 / (clock * ipc);
+    this.instructionSet = new InstructionSet(this.registerFile, mspi);
     const keyword: string[] = Object.keys(this.instructionSet.instructions);
     this.parser = new Parser(registerMap, keyword);
   }

@@ -40,10 +40,10 @@ const registerMap: {[id: string]: number} = {
 };
 
 const registerFile: RegisterFile = new RegisterFile(registerMap);
-const instructionSet: InstructionSet = new InstructionSet(registerFile);
+const instructionSet: InstructionSet = new InstructionSet(registerFile, 100);
 
 describe('InstructionSet', () => {
-  it('add', () => {
+  it('add', async () => {
     const rs: number = 16;
     const rt: number = 17;
     const rd: number = 18;
@@ -54,26 +54,26 @@ describe('InstructionSet', () => {
     registerFile.getRegister(rt).set(rtVal);
     registerFile.getRegister(rd).set(rdVal);
 
-    instructionSet.getInstruction('add').run(rs, rt, rd);
+    await instructionSet.getInstruction('add').run(rs, rt, rd);
 
     assert.strictEqual(registerFile.getRegister(rs).value, rtVal + rdVal);
     assert.strictEqual(registerFile.getRegister(rt).value, rtVal);
     assert.strictEqual(registerFile.getRegister(rd).value, rdVal);
   });
 
-  it('addi', () => {
+  it('addi', async () => {
     const rs: number = 16;
     const rt: number = 17;
     const imm: number = 100;
   
     const rtVal: number = registerFile.getRegister(rt).value;
 
-    instructionSet.getInstruction('addi').run(rs, rt, imm);
+    await instructionSet.getInstruction('addi').run(rs, rt, imm);
 
     assert.strictEqual(registerFile.getRegister(rs).value, rtVal + imm);
   });
 
-  it('sub', () => {
+  it('sub', async () => {
     const rs: number = 16;
     const rt: number = 17;
     const rd: number = 18;
@@ -84,7 +84,7 @@ describe('InstructionSet', () => {
     registerFile.getRegister(rt).set(rtVal);
     registerFile.getRegister(rd).set(rdVal);
 
-    instructionSet.getInstruction('sub').run(rs, rt, rd);
+    await instructionSet.getInstruction('sub').run(rs, rt, rd);
 
     assert.strictEqual(registerFile.getRegister(rs).value, rtVal - rdVal);
     assert.strictEqual(registerFile.getRegister(rt).value, rtVal);
