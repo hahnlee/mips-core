@@ -1,6 +1,6 @@
 {
   "name": "mips-core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "MIPS Assembler Simulator Inspired by MARS",
   "main": "build/mips-core.js",
   "types": "build/mips-core.d.ts",
