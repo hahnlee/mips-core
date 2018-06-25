@@ -1,6 +1,6 @@
 {
   "name": "mips-core",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "MIPS Assembler Simulator Inspired by MARS",
   "main": "build/mips-core.js",
   "types": "build/mips-core.d.ts",
@@ -12,10 +12,10 @@
   },
   "author": "Han Lee",
   "license": "MIT",
-  "homepage": "https://github.com/sn0wle0pard/mips-core",
+  "homepage": "https://github.com/hahnlee/mips-core",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sn0wle0pard/mips-core.git"
+    "url": "https://github.com/hahnlee/mips-core.git"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.0",
